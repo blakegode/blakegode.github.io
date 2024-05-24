@@ -8,25 +8,54 @@
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Programmer</p>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Web Developer | Designer | Programmer</p>
+        </div>
     </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
-        <section id="portfolio">
+        <section id="portfolio" class="container">
             <h2>My Projects</h2>
-            <!-- Add your projects here -->
+            <div class="projects">
+                <div class="project">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project">
+                    <img src="images/project3.jpg" alt="Project 3">
+                    <h3>Project Title 3</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+            </div>
         </section>
-        <section id="about">
+        <section id="about" class="container">
             <h2>About Me</h2>
-            <p>Details about you.</p>
+            <p>Details about you. This can include your background, skills, and experience.</p>
         </section>
-        <section id="contact">
+        <section id="contact" class="container">
             <h2>Contact</h2>
-            <p>Email: you@example.com</p>
+            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <div class="container">
+            <p>&copy; 2024 Your Name</p>
+        </div>
     </footer>
 </body>
 </html>
