@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e0f7fa; /* Light blue background color */
 }
 
 header {
@@ -41,17 +42,33 @@ footer {
     background-color: #f1f1f1;
 }
 
-.project, article {
-    margin-bottom: 20px;
-}
-
-.project a, article a {
+.project a {
     color: #007BFF;
     text-decoration: none;
 }
 
-.project a:hover, article a:hover {
+.project a:hover {
     text-decoration: underline;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+}
+
+.image {
+    flex: 1;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
 }
 
 
