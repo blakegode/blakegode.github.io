@@ -39,11 +39,11 @@ h1, h2, h3 {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
 .project a {
-    color: #007BFF;
+    color: #005fc5;
     text-decoration: none;
 }
 
