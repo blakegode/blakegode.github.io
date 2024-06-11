@@ -117,7 +117,13 @@ footer {
     border: 2px solid #000000;
 }
 
+.contact-list {
+    list-style: none;
+}
 
-
-
-
+.contact-list img {
+    width: 30px; 
+    height: 30px;
+    object-fit: contain; /* Ensures the entire image fits within the specified dimensions */
+    margin-right: 10px; /* Adds some spacing between the image and the link */
+}
