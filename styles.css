@@ -103,6 +103,7 @@ footer {
 .about-text {
     flex: 1;
     padding-right: 20px;
+    font-size: 1.4em;
 }
 
 .about-image {
