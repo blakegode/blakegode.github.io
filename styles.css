@@ -1,31 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
 }
 
-header {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    padding: 10px 0;
-    text-align: center;
-    font-family: 'Georgia', serif; 
-    border-bottom: 1px solid #ffffff;
-}
-
-header h1 {
-    font-size: 1.5em;
-    margin: 0;
-    font-weight: bold;
-}
-
-header p {
-    margin: 0;
-}
+/* .site-header rule removed as it's no longer used */
 
 nav {
     background-color: #000000;
+    color: rgb(255, 255, 255); /* This was part of .site-header */
+    padding: 10px 0; /* This was part of .site-header */
+    font-family: 'Inter', sans-serif;  /* Changed from Georgia to Inter */
+    border-bottom: 1px solid #ffffff; /* This was part of .site-header */
 }
 
 nav .container {
@@ -47,6 +36,11 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+nav a:hover {
+    color: #cccccc; /* Lighter grey for hover */
 }
 
 .container {
@@ -57,8 +51,9 @@ nav a {
 
 main h2 {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em; /* Reduced margin */
     color: #000000;
+    font-weight: 700; /* Inter bold */
 }
 
 .projects {
@@ -71,11 +66,21 @@ main h2 {
     background-color: #ffffff;
     padding: 1em;
     margin: 1em;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08); /* Softer shadow */
     width: 43%;
-    text-align: center;
+    text-align: left; /* Changed from center to left */
     border-radius: 8px;
-    border: 2px solid #000000;
+    border: none; /* Removed border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for hover effect */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* More pronounced shadow */
+}
+
+.project p {
+    line-height: 1.6; /* Increased line height */
 }
 
 .project img {
@@ -84,8 +89,37 @@ main h2 {
 }
 
 .project h3 {
-    margin: 0.5em 0;
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-weight: 700; /* Make title bold */
 }
+
+.project .tech-used {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 0.75em;
+    line-height: 1.5; /* Adjusted line-height for this specific paragraph */
+}
+
+.project a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Combined transitions */
+}
+
+.project a:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+    color: #fff; /* Ensure text color remains white */
+    text-decoration: none; /* Remove underline if any */
+}
+
+/* Removed the old .project h3 style as it's redefined above more specifically */
 
 footer {
     background-color: #000000;
@@ -98,12 +132,36 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 50px 10%; /* Adjust padding, use % for responsive side padding */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .about-text {
     flex: 1;
     padding-right: 20px;
     font-size: 1.4em;
+}
+
+/* Styling for the bio paragraph specifically */
+.about-text > p {
+    line-height: 1.6; /* Increased line height for bio */
+}
+
+.hero-text h1 {
+    font-size: 3em; /* Larger font size for hero heading */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-family: 'Inter', sans-serif; /* Changed from Georgia to Inter */
+    color: #333; /* Darker text color for readability on light background */
+}
+
+.hero-text p {
+    font-size: 1.5em; /* Larger font size for hero subheading */
+    margin-bottom: 1em;
+    font-family: 'Inter', sans-serif; /* Changed from Georgia to Inter */
+    color: #555; /* Slightly lighter text color */
 }
 
 .about-image {
@@ -115,16 +173,150 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 2px solid #000000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added subtle shadow */
+    border: none; /* Removed border for consistency */
 }
 
 .contact-list {
-    list-style: none;
+    list-style: none; /* Remove default list bullets */
+    padding-left: 0; /* Remove default left padding */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Increased spacing between items */
 }
 
 .contact-list img {
     width: 30px; 
     height: 30px;
-    object-fit: contain; /* Ensures the entire image fits within the specified dimensions */
-    margin-right: 10px; /* Adds some spacing between the image and the link */
+    object-fit: contain;
+    margin-right: 15px; /* Slightly increased margin for icon */
+}
+
+.contact-list a {
+    font-size: 1.1em; /* Increased font size for readability */
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Default link color (adjust to theme if needed) */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+    padding: 5px 0; /* Add vertical padding for larger clickable area */
+}
+
+.contact-list a:hover {
+    color: #007bff; /* Standard hover color */
+    text-decoration: underline; /* Add underline on hover for visual feedback */
+}
+
+/* --- Responsive Styles --- */
+
+/* Medium devices (tablets, landscape phones, intermediate project card layout) */
+@media (max-width: 900px) {
+    .project {
+        width: 80%; /* Wider cards for a single column layout before stacking fully */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Medium devices (tablets, large phones in portrait) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center; /* Center text and image when stacked */
+        padding: 30px 5%; /* Reduced padding for smaller screens */
+    }
+
+    .about-text {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add some space between text and image */
+    }
+
+    .about-image {
+        text-align: center; /* Ensure image is centered if its container is wider */
+        width: 100%; /* Allow image container to take full width */
+    }
+
+    .about-image img {
+        max-width: 70%; /* Control image size, could also use a fixed max-width like 300px */
+        display: block; /* For centering with margin auto if needed */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Small devices (most phones) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Center nav items when stacked */
+    }
+
+    nav li {
+        margin: 0.5em 0; /* Vertical spacing for stacked nav items */
+    }
+
+    .container {
+        width: 95%; /* Reduce side margins */
+    }
+
+    .project {
+        width: 90%; /* Projects take more width */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2em; /* Slightly reduce hero heading size */
+    }
+
+    .hero-text p {
+        font-size: 1.2em; /* Slightly reduce hero subheading size */
+    }
+
+    .about-text {
+        font-size: 1.2em; /* Adjust bio font size */
+    }
+
+    .project h3 {
+        font-size: 1.2em; /* Adjust project title font size */
+    }
+
+    .project p, .project .tech-used {
+        font-size: 0.85em; /* Adjust project paragraph font size */
+    }
+}
+
+/* Extra small devices (smaller phones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; /* Reduce base font size for better readability */
+    }
+
+    .hero-text h1 {
+        font-size: 2em; /* Further reduce hero heading */
+    }
+
+    .hero-text p {
+        font-size: 1.1em; /* Further reduce hero subheading */
+    }
+
+    main h2 { /* Section titles */
+        font-size: 1.6em;
+    }
+
+    .about-text {
+        font-size: 1.1em; /* Adjust bio font size */
+    }
+
+    .project h3 {
+        font-size: 1.1em; /* Further reduce project titles */
+    }
+
+    .project p, .project .tech-used {
+        font-size: 0.8em; /* Further reduce project text */
+    }
+
+    .project a { /* Project buttons */
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
 }

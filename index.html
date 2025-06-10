@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Blake Gode</h1>
-            <p>Software Developer</p>
-        </div>
-    </header>
     <nav>
         <div class="container">
             <ul>
@@ -23,18 +17,21 @@
         </div>
     </nav>
     <main>
-        <section id="about" class="container">
-            <h2>About Me</h2>
+        <section id="about">
             <div class="about-content">
                 <div class="about-text">
+                    <div class="hero-text">
+                        <h1>Blake Gode</h1>
+                        <p>Software Developer</p>
+                    </div>
                     <p>My name is Blake Gode, and I am a computer science major
                      at the University of Minnesota Duluth. I plan on finishing
                      my degree after the Fall of 2025. I have experience with using 
-                     Python and SQL to manipulate and organize data. I am able to
-                     use this data to train predictive machine learning models, 
-                     automate data processes, or create interactive dashboards for 
-                     users. Using trained models, I can create statistical analytics
-                     and visuals to interpret the accuracy and efficiency of the models.</p>
+                     <strong>Python</strong> and <strong>SQL</strong> to <strong>manipulate and organize data</strong>. I am able to
+                     use this data to train <strong>predictive machine learning models</strong>,
+                     <strong>automate data processes</strong>, or <strong>create interactive dashboards</strong> for
+                     users. Using trained models, I can create <strong>statistical analytics and visuals</strong>
+                     to interpret the <strong>accuracy and efficiency of the models</strong>.</p>
                 </div>
                 <div class="about-image">
                     <img src="visuals/headshot.jpg" alt="Your Image">
@@ -45,7 +42,9 @@
             <h2>My Projects</h2>
             <div class="projects">
                 <div class="project">
+                    <h3>NBA Player Points Prediction</h3>
                     <img src="visuals/accuracy_scores_bar_graph.png" alt="NBA Player Points Prediction">
+                    <p class="tech-used"><strong>Technologies:</strong> Python, Scikit-learn, Pandas, NumPy</p>
                     <p>This project trains a machine learning model to predict how many points
                          NBA players would score in a given game. The project first cleans and
                          prepares data of NBA box scores from the 2023-2024 season. The clean
@@ -54,26 +53,27 @@
                          target value. Finally, the data is used to train Scikit Learn's Ridge
                          Classifier model, which is used to predict how many points each NBA
                          player will score in the next game.</p>
-                         <br>
                          <a href="https://github.com/blakegode/NBA_player_PTS_predictor" target="_blank">github.com/blakegode/NBA_player_PTS_predictor</a>
                 </div>
                 <div class="project">
+                    <h3>Flutter Sleep App</h3>
                     <img src="visuals/flutter sleep app gif.gif" alt="Flutter Sleep App">
+                    <p class="tech-used"><strong>Technologies:</strong> Flutter, Dart, SQLite</p>
                     <p>This Flutter-based Android application is designed to help users monitor
                         and improve their sleep quality by logging their sleep patterns,
                         calculating their sleep needs, and providing access to reliable 
                         sleep-related information.</p>
-                        <br>
                          <a href="https://github.com/blakegode/Flutter-Sleep-App" target="_blank">github.com/blakegode/Flutter-Sleep-App</a>
                 </div>
                 <div class="project">
+                    <h3>Graph Creation & Traversal App</h3>
                     <img src="visuals/GraphDemo.gif" alt="Graph Project" width="460" height="250">
+                    <p class="tech-used"><strong>Technologies:</strong> Java, Android SDK, XML</p>
                     <p>This project is an Android app that allows users to create and
                          interact with graphs. Users can add vertices and edges, and 
                          perform a Depth First traversal on a plotted out graph. The 
                          traversed vertices and edges are highlighted in red to demonstrate 
                          the order of traversal.</p>
-                         <br>
                          <a href="https://github.com/blakegode/Graph-Project" target="_blank">github.com/blakegode/Graph-Project</a>
                 </div>
             </div>
